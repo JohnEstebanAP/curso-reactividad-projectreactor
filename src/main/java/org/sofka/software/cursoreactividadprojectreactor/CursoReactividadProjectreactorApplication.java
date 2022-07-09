@@ -29,24 +29,23 @@ public class CursoReactividadProjectreactorApplication implements CommandLineRun
 				.doOnNext(p -> log.info("[Reactor] Persona: " + p))
 				.subscribe(p -> log.info("[RxJava2] Persona: "+ p));
 	}
-/*
+
 	public static void mono (){
 		//mono representa un flujo de dato de tipo asíncrono.
 		Mono.just(new Persona(1,"John", 23))
 				.subscribe(p -> log.info(p.toString()));
 	}
-*/
-	/*
+
+
 	public void  flux(){
 		List<Persona> personas = new ArrayList<>();
 		personas.add(new Persona(1, "John",   23));
 		personas.add(new Persona(2, "Luisa",   20));
 
 		Flux.fromIterable(personas).subscribe(p -> log.info(p.toString()));
-	}*/
+	}
 
 	//Transformar de flux a mono
-	/*
 	public void fluxMono(){
 		List<Persona> personas = new ArrayList<>();
 		personas.add(new Persona(1, "John",   23));
@@ -55,7 +54,7 @@ public class CursoReactividadProjectreactorApplication implements CommandLineRun
 		Flux<Persona> fx =Flux.fromIterable(personas);
 		fx.collectList().subscribe( lista -> log.info(lista.toString()));
 	}
-*/
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(CursoReactividadProjectreactorApplication.class, args);
@@ -63,13 +62,13 @@ public class CursoReactividadProjectreactorApplication implements CommandLineRun
 
 	@Override
 	public void run(String... args) throws Exception {
-		reactor();
-		rxjava2();
+		//reactor();
+		//rxjava2();
 
-		//mono();
-		//flux();
+		mono();
+		flux();
 
-		//fluxMono();
+		fluxMono();
 
 	}
 }
