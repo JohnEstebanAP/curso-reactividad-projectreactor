@@ -3,6 +3,7 @@ package org.sofka.software.cursoreactividadprojectreactor;
 import io.reactivex.Observable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.sofka.software.cursoreactividadprojectreactor.creacion.Creacion;
 import org.sofka.software.cursoreactividadprojectreactor.model.Persona;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -55,6 +56,8 @@ public class CursoReactividadProjectreactorApplication implements CommandLineRun
 		fx.collectList().subscribe( lista -> log.info(lista.toString()));
 	}
 
+	//Operaciones de Creación
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(CursoReactividadProjectreactorApplication.class, args);
@@ -65,10 +68,13 @@ public class CursoReactividadProjectreactorApplication implements CommandLineRun
 		//reactor();
 		//rxjava2();
 
-		mono();
-		flux();
+		//mono();
+		//flux();
 
-		fluxMono();
+		//fluxMono();
 
+		Creacion app = new Creacion();
+		//app.range();
+		app.repeat();
 	}
 }
