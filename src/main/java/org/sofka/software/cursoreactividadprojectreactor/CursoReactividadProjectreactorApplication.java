@@ -65,7 +65,7 @@ public class CursoReactividadProjectreactorApplication implements CommandLineRun
 	public void run(String... args) throws Exception {
 		reactor();
 		rxjava2();
-
+//todo
 		//mono();
 		//flux();
 
