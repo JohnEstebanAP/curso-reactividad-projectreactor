@@ -20,13 +20,13 @@ public class CursoReactividadProjectreactorApplication implements CommandLineRun
 
 	public void reactor(){
 		Mono.just(new Persona(1,"John", 23))
-		//		.doOnNext(p -> log.info("[Reactor] Persona: " + p))
+				.doOnNext(p -> log.info("[Reactor] Persona: " + p))
 				.subscribe(p -> log.info("[Reactor] Persona: "+ p));
 	}
 
 	public void rxjava2(){
 		Observable.just(new Persona(1,"John", 23))
-		//		.doOnNext(p -> log.info("[Reactor] Persona: " + p))
+				.doOnNext(p -> log.info("[Reactor] Persona: " + p))
 				.subscribe(p -> log.info("[RxJava2] Persona: "+ p));
 	}
 /*
@@ -65,7 +65,7 @@ public class CursoReactividadProjectreactorApplication implements CommandLineRun
 	public void run(String... args) throws Exception {
 		reactor();
 		rxjava2();
-//todo
+
 		//mono();
 		//flux();
 
