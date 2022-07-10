@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.sofka.software.cursoreactividadprojectreactor.creacion.Creacion;
 import org.sofka.software.cursoreactividadprojectreactor.model.Persona;
+import org.sofka.software.cursoreactividadprojectreactor.transformacion.Transformacion;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -73,8 +74,17 @@ public class CursoReactividadProjectreactorApplication implements CommandLineRun
 
 		//fluxMono();
 
-		Creacion app = new Creacion();
+		//Creacion app = new Creacion();
 		//app.range();
-		app.repeat();
+		//app.repeat();
+
+		Transformacion app = new Transformacion();
+		log.info("**************Map**************");
+		app.map();
+		log.info("**************FlatMap**************");
+		app.flatMap();
+		log.info("**************GoupBy**************");
+		app.groupBy();
+
 	}
 }
